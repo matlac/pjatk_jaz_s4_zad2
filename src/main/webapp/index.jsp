@@ -8,8 +8,33 @@
 </head>
 <body>
 <form action="hello" method="post">
-<label>Imię: <input type="text" id="name" name="name"></label>
-<input type="submit" value="wyslij >">
+<table>
+<tr>
+<td><label>Kwota kredytu:</label></td>
+<td><input type="number" name="amount"></td>
+</tr>
+<tr>
+<td><label>Ilość rat:</label></td>
+<td><input type="number" name="rates_count"></td>
+</tr>
+<tr>
+<td><label>Oprocentowanie:</label></td>
+<td><input type="number" name="percent"></td>
+</tr>
+<tr>
+<td><label>Opłata stała:</label></td>
+<td><input type="number" name="const_rate_amount"></td>
+</tr>
+<tr>
+<td><label>Rodzaj rat:</label></td>
+<td>
+<input type="radio" name="rates_type" value="decrease">Malejące
+<input type="radio" name="rates_type" value="const">Stałe
+</td>
+</tr>
+</table>
+<br/>
+<input type="submit" value="Harmonogram spłat >">
 </form>
 </body>
 </html>
