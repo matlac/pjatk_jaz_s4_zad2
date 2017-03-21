@@ -94,7 +94,7 @@ public class CalculateServlet extends HttpServlet {
 		table.setSpacingBefore(10f);
 		table.setSpacingAfter(10f);
 
-		DecimalFormat df = new DecimalFormat("#.00");
+		DecimalFormat df = new DecimalFormat("#0.00");
 
 		PdfPCell cell_number_title = new PdfPCell(new Paragraph("Nr raty"));
 		PdfPCell cell_amount_title = new PdfPCell(new Paragraph("Czesc kapitalowa"));
@@ -111,9 +111,9 @@ public class CalculateServlet extends HttpServlet {
 
 		for(CalculateRowModel row : ratesData) {
 			PdfPCell cell_number = new PdfPCell(new Paragraph(Integer.toString(row.getRate_number())));
-			PdfPCell cell_amount = new PdfPCell(new Paragraph(String.valueOf(df.format(row.getRate_amount() / 100))));
-			PdfPCell cell_interest = new PdfPCell(new Paragraph(String.valueOf(df.format(row.getRate_interest() / 100))));
-			PdfPCell cell_sum = new PdfPCell(new Paragraph(String.valueOf(df.format(row.getRate_sum() / 100))));
+			PdfPCell cell_amount = new PdfPCell(new Paragraph(df.format((float) row.getRate_amount() / 100)));
+			PdfPCell cell_interest = new PdfPCell(new Paragraph(df.format((float)row.getRate_interest() / 100)));
+			PdfPCell cell_sum = new PdfPCell(new Paragraph(df.format((float)row.getRate_sum() / 100)));
 			cell_number.setPadding(10);
 			cell_amount.setPadding(10);
 			cell_interest.setPadding(10);
