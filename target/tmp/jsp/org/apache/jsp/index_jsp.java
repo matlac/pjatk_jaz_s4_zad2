@@ -11,20 +11,10 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
 
   private static java.util.Vector _jspx_dependants;
 
-  private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_c_if_test;
-
   private org.glassfish.jsp.api.ResourceInjector _jspx_resourceInjector;
 
   public Object getDependants() {
     return _jspx_dependants;
-  }
-
-  public void _jspInit() {
-    _jspx_tagPool_c_if_test = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
-  }
-
-  public void _jspDestroy() {
-    _jspx_tagPool_c_if_test.release();
   }
 
   public void _jspService(HttpServletRequest request, HttpServletResponse response)
@@ -51,65 +41,48 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       _jspx_out = out;
       _jspx_resourceInjector = (org.glassfish.jsp.api.ResourceInjector) application.getAttribute("com.sun.appserv.jsp.resource.injector");
 
-      out.write("\r\n");
-      out.write("\r\n");
-      out.write("<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\r\n");
-      out.write("<html>\r\n");
-      out.write("<head>\r\n");
-      out.write("    <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\r\n");
-      out.write("    <link rel=\"stylesheet\" type=\"text/css\" href=\"css/bootstrap.min.css\">\r\n");
-      out.write("    <title>Kalkulator raty kredytu</title>\r\n");
-      out.write("</head>\r\n");
-      out.write("<body>\r\n");
-      out.write("<div class=\"container\" style=\"padding: 30px;\">\r\n");
-      out.write("    <div class=\"row\">\r\n");
-      out.write("        <div class=\"col-md-6 col-md-offset-3\">\r\n");
-      out.write("            <form action=\"calculate\" method=\"post\">\r\n");
-      out.write("                ");
-      if (_jspx_meth_c_if_0(_jspx_page_context))
-        return;
-      out.write("\r\n");
-      out.write("                ");
- session.removeAttribute("FormError"); 
-      out.write("\r\n");
-      out.write("                <table class=\"table\">\r\n");
-      out.write("                    <tr>\r\n");
-      out.write("                        <td width=\"40%\"><label>Kwota kredytu:</label></td>\r\n");
-      out.write("                        <td><input type=\"number\" class=\"form-control\" min=\"0\" name=\"amount\"></td>\r\n");
-      out.write("                    </tr>\r\n");
-      out.write("                    <tr>\r\n");
-      out.write("                        <td><label>Ilość rat:</label></td>\r\n");
-      out.write("                        <td><input type=\"number\" class=\"form-control\" min=\"0\" name=\"rates_count\"></td>\r\n");
-      out.write("                    </tr>\r\n");
-      out.write("                    <tr>\r\n");
-      out.write("                        <td><label>Oprocentowanie:</label></td>\r\n");
-      out.write("                        <td><input type=\"number\" class=\"form-control\" min=\"0\" step=\"0.01\" name=\"percent\"></td>\r\n");
-      out.write("                    </tr>\r\n");
-      out.write("                    ");
-      out.write("\r\n");
-      out.write("                    ");
-      out.write("\r\n");
-      out.write("                        ");
-      out.write("\r\n");
-      out.write("                        ");
-      out.write("\r\n");
-      out.write("                    ");
-      out.write("\r\n");
-      out.write("                    <tr>\r\n");
-      out.write("                        <td><label>Rodzaj rat:</label></td>\r\n");
-      out.write("                        <td>\r\n");
-      out.write("                            <div class=\"form-check\"><input type=\"radio\" class=\"form-check-input\" name=\"rates_type\" value=\"decrease\"> Malejące</div>\r\n");
-      out.write("                            <div class=\"form-check\"><input type=\"radio\" class=\"form-check-input\" name=\"rates_type\" value=\"equal\"> Stałe</div>\r\n");
-      out.write("                        </td>\r\n");
-      out.write("                    </tr>\r\n");
-      out.write("                </table>\r\n");
-      out.write("                <br/>\r\n");
-      out.write("                <input type=\"submit\" class=\"btn btn-primary pull-right\" value=\"Harmonogram spłat\">\r\n");
-      out.write("            </form>\r\n");
-      out.write("        </div>\r\n");
-      out.write("    </div>\r\n");
-      out.write("</div>\r\n");
-      out.write("</body>\r\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\n");
+      out.write("<html>\n");
+      out.write("<head>\n");
+      out.write("    <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n");
+      out.write("    <link rel=\"stylesheet\" type=\"text/css\" href=\"css/bootstrap.min.css\">\n");
+      out.write("    <title>System autoryzacji</title>\n");
+      out.write("</head>\n");
+      out.write("<body>\n");
+      out.write("<div class=\"container\" style=\"padding: 30px;\">\n");
+      out.write("\t<nav class=\"navbar navbar-default\">\n");
+      out.write("        <div class=\"container-fluid\">\n");
+      out.write("          <div class=\"navbar-header\">            \n");
+      out.write("            <a class=\"navbar-brand\" href=\"/\">System autoryzacji</a>\n");
+      out.write("          </div>\n");
+      out.write("          <div id=\"navbar\" class=\"navbar-collapse collapse\">\n");
+      out.write("            <ul class=\"nav navbar-nav\">\n");
+      out.write("              <li><a href=\"/\">Strona główna</a></li>\n");
+      out.write("              <li><a href=\"/premium\">Strona premium</a></li>              \n");
+      out.write("            </ul>\n");
+      out.write("            <ul class=\"nav navbar-nav navbar-right\">\n");
+      out.write("              <!--<li><a href=\"/users_list\">Lista użytkowników</a></li>\n");
+      out.write("              <li><a href=\"/user_premiumr\">Ustaw premium</a></li>\n");
+      out.write("              <li><a href=\"/user_profile\">Twój profil</a></li>-->\n");
+      out.write("              <li><a href=\"/show_login\">Logowanie</a></li>\n");
+      out.write("              <li><a href=\"/show_register\">Rejestracja</a></li>\n");
+      out.write("            </ul>\n");
+      out.write("          </div>\n");
+      out.write("        </div>\n");
+      out.write("     </nav>\n");
+      out.write("\n");
+      out.write("    <div class=\"row\">\n");
+      out.write("        <div class=\"col-md-6 col-md-offset-3 text-center\"> \n");
+      out.write("        \t\t<h1>System autoryzacji</h1>       \t\t\n");
+      out.write("                <img height=\"180\" src=\"img/logo.png\">               \n");
+      out.write("        </div>\n");
+      out.write("    </div>\n");
+      out.write("</div>\n");
+      out.write("</body>\n");
       out.write("</html>");
     } catch (Throwable t) {
       if (!(t instanceof SkipPageException)){
@@ -122,33 +95,5 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
     } finally {
       _jspxFactory.releasePageContext(_jspx_page_context);
     }
-  }
-
-  private boolean _jspx_meth_c_if_0(PageContext _jspx_page_context)
-          throws Throwable {
-    PageContext pageContext = _jspx_page_context;
-    JspWriter out = _jspx_page_context.getOut();
-    //  c:if
-    org.apache.taglibs.standard.tag.rt.core.IfTag _jspx_th_c_if_0 = (org.apache.taglibs.standard.tag.rt.core.IfTag) _jspx_tagPool_c_if_test.get(org.apache.taglibs.standard.tag.rt.core.IfTag.class);
-    _jspx_th_c_if_0.setPageContext(_jspx_page_context);
-    _jspx_th_c_if_0.setParent(null);
-    _jspx_th_c_if_0.setTest(((java.lang.Boolean) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${sessionScope.FormError}", java.lang.Boolean.class, (PageContext)_jspx_page_context, null)).booleanValue());
-    int _jspx_eval_c_if_0 = _jspx_th_c_if_0.doStartTag();
-    if (_jspx_eval_c_if_0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
-      do {
-        out.write("\r\n");
-        out.write("                    <div class=\"alert alert-danger\">Podaj poprawne dane</div>\r\n");
-        out.write("                ");
-        int evalDoAfterBody = _jspx_th_c_if_0.doAfterBody();
-        if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
-          break;
-      } while (true);
-    }
-    if (_jspx_th_c_if_0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
-      _jspx_tagPool_c_if_test.reuse(_jspx_th_c_if_0);
-      return true;
-    }
-    _jspx_tagPool_c_if_test.reuse(_jspx_th_c_if_0);
-    return false;
   }
 }

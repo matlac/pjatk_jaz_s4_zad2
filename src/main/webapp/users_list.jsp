@@ -20,23 +20,36 @@
           <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
               <li><a href="/">Strona główna</a></li>
-              <li><a href="/premium.jsp">Strona premium</a></li>              
+              <li><a href="/premium">Strona premium</a></li>              
             </ul>
             <ul class="nav navbar-nav navbar-right">
-              <!--<li><a href="/users_list">Lista użytkowników</a></li>
+              <li><a href="/users_list">Lista użytkowników</a></li>
               <li><a href="/user_premiumr">Ustaw premium</a></li>
-              <li><a href="/user_profile">Twój profil</a></li>-->
-              <li><a href="/show_login.jsp">Logowanie</a></li>
-              <li><a href="/show_register.jsp">Rejestracja</a></li>
+              <li><a href="/user_profile">Twój profil</a></li> 
+              <li><a href="/logout">Wyloguj</a></li>
             </ul>
           </div>
         </div>
      </nav>
 
     <div class="row">
-        <div class="col-md-6 col-md-offset-3 text-center"> 
-        		<h1>System autoryzacji</h1>       		
-                <img height="180" src="img/logo.png">               
+        <div class="col-md-6 col-md-offset-3">        		
+                <table class="table table-bordered table-hover">
+                    <thead><tr class="bg-success">
+                        <th>Id</th>
+                        <th>Login</th>
+                        <th>Email</th>
+                        <th>Premium</th>
+                    </tr></thead><tbody>
+                    <c:forEach items="${users}" var="user">
+                        <tr>
+                            <td>${user.getId()}</td>
+                            <td>${user.getLogin()}</td>
+                            <td>${user.getEmail()}</td>
+                            <td>${user.getPremium()}</td>                        	
+                        </tr>
+                    </c:forEach></tbody>
+                </table>                
         </div>
     </div>
 </div>
