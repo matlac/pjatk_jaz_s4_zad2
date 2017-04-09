@@ -12,28 +12,10 @@
 </head>
 <body>
 <div class="container" style="padding: 30px;">
-	<nav class="navbar navbar-default">
-        <div class="container-fluid">
-          <div class="navbar-header">            
-            <a class="navbar-brand" href="/">System autoryzacji</a>
-          </div>
-          <div id="navbar" class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-              <li><a href="/">Strona główna</a></li>
-              <li><a href="/premium">Strona premium</a></li>              
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-              <li><a href="/users_list">Lista użytkowników</a></li>
-              <li><a href="/user_premiumr">Ustaw premium</a></li>
-              <li><a href="/user_profile">Twój profil</a></li> 
-              <li><a href="/logout">Wyloguj</a></li>
-            </ul>
-          </div>
-        </div>
-     </nav>
+	<jsp:include page="menu.jsp"></jsp:include>
 
     <div class="row">
-        <div class="col-md-6 col-md-offset-3">        		
+        <div class="col-md-12">        		
                 <table class="table table-bordered table-hover">
                     <thead><tr class="bg-success">
                         <th>Id</th>
