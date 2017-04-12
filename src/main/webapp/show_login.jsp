@@ -10,17 +10,18 @@
 </head>
 <body>
 <div class="container" style="padding: 30px;">
+    <jsp:include page="menu.jsp"></jsp:include>
     <div class="row">
         <div class="col-md-6 col-md-offset-3">
-            <form action="login" method="post">
-                <c:if test="${sessionScope.FormError}">
+            <form action="/do_login" method="post">
+                <c:if test="${sessionScope.LoginFormError}">
                     <div class="alert alert-danger">Podaj poprawne dane logowania</div>
                 </c:if>
-                <% session.removeAttribute("FormError"); %>
+                <% session.removeAttribute("LoginFormError"); %>
                 <table class="table">
                     <tr>
                         <td width="40%"><label>Login:</label></td>
-                        <td><input type="test" class="form-control" name="login"></td>
+                        <td><input type="text" class="form-control" name="login"></td>
                     </tr>
                     <tr>
                         <td><label>Hasło:</label></td>
@@ -28,7 +29,7 @@
                     </tr>                    
                 </table>
                 <br/>
-                <input type="submit" class="btn btn-primary pull-right" value="Zarejestruj się">
+                <input type="submit" class="btn btn-primary pull-right" value="Zaloguj się">
             </form>
         </div>
     </div>

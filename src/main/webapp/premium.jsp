@@ -15,13 +15,9 @@
 	<jsp:include page="menu.jsp"></jsp:include>
 
     <div class="row">
-        <div class="col-md-8 col-md-offset-2 text-center">
-                <c:if test="${sessionScope.NoRights}">
-                    <div class="alert alert-danger">Brak uprawnień</div>
-                </c:if>
-                <% session.removeAttribute("NoRights"); %>
-        		<h1>System autoryzacji</h1>       		
-                <img height="160" style="margin-top: 40px;" src="img/logo.png">
+        <div class="col-md-6 col-md-offset-3 text-center"> 
+        		<h1>Strona premium</h1>
+                <img height="260" src="img/premium.jpg">
         </div>
     </div>
 </div>

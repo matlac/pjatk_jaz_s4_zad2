@@ -15,13 +15,20 @@
 	<jsp:include page="menu.jsp"></jsp:include>
 
     <div class="row">
-        <div class="col-md-8 col-md-offset-2 text-center">
-                <c:if test="${sessionScope.NoRights}">
-                    <div class="alert alert-danger">Brak uprawnień</div>
-                </c:if>
-                <% session.removeAttribute("NoRights"); %>
-        		<h1>System autoryzacji</h1>       		
-                <img height="160" style="margin-top: 40px;" src="img/logo.png">
+        <div class="col-md-6 col-md-offset-3">
+        		<h1>Profil użytkownika: ${sessionScope.LoggedUser.getLogin()}</h1>
+            Email: ${sessionScope.LoggedUser.getEmail()}<br/>
+            Premium: <c:choose>
+            <c:when test="${sessionScope.LoggedRole==0}">
+                nie
+            </c:when>
+            <c:when test="${sessionScope.LoggedRole==1}">
+                tak
+            </c:when>
+            <c:when test="${sessionScope.LoggedRole==2}">
+                admin
+            </c:when>
+        </c:choose>
         </div>
     </div>
 </div>

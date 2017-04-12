@@ -21,14 +21,26 @@
                         <th>Id</th>
                         <th>Login</th>
                         <th>Email</th>
-                        <th>Premium</th>
+                        <th>Status</th>
                     </tr></thead><tbody>
                     <c:forEach items="${users}" var="user">
                         <tr>
                             <td>${user.getId()}</td>
                             <td>${user.getLogin()}</td>
                             <td>${user.getEmail()}</td>
-                            <td>${user.getPremium()}</td>                        	
+                            <td>
+                                <c:choose>
+                                    <c:when test="${user.getRole()==0}">
+                                        nie
+                                    </c:when>
+                                    <c:when test="${user.getRole()==1}">
+                                        tak
+                                    </c:when>
+                                    <c:when test="${user.getRole()==2}">
+                                        admin
+                                    </c:when>
+                                </c:choose>
+                            </td>
                         </tr>
                     </c:forEach></tbody>
                 </table>                

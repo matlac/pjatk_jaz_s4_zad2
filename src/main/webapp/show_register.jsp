@@ -10,13 +10,18 @@
 </head>
 <body>
 <div class="container" style="padding: 30px;">
+    <jsp:include page="menu.jsp"></jsp:include>
     <div class="row">
         <div class="col-md-6 col-md-offset-3">
-            <form action="register" method="post">
-                <c:if test="${sessionScope.FormError}">
+            <form action="/do_register" method="post">
+                <c:if test="${sessionScope.RegisterFormError}">
                     <div class="alert alert-danger">Podaj poprawne dane rejestracji</div>
                 </c:if>
-                <% session.removeAttribute("FormError"); %>
+                <c:if test="${sessionScope.RegisterFormErrorUserExists}">
+                    <div class="alert alert-danger">Podany login / email już istnieje w systemie</div>
+                </c:if>
+                <% session.removeAttribute("RegisterFormError"); %>
+                <% session.removeAttribute("RegisterFormErrorUserExists"); %>
                 <table class="table">
                     <tr>
                         <td width="40%"><label>Login:</label></td>
